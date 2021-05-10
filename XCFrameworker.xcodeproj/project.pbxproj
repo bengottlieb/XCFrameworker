@@ -12,6 +12,13 @@
 		B558581426493EB900A91281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B558581326493EB900A91281 /* Assets.xcassets */; };
 		B558581726493EB900A91281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B558581626493EB900A91281 /* Preview Assets.xcassets */; };
 		B558581A26493EB900A91281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B558581826493EB900A91281 /* Main.storyboard */; };
+		B558582326493EC300A91281 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582226493EC300A91281 /* Builder.swift */; };
+		B558582526493EE300A91281 /* XcodeProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582426493EE300A91281 /* XcodeProject.swift */; };
+		B558582726493F1500A91281 /* XcodeProject.Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582626493F1500A91281 /* XcodeProject.Scheme.swift */; };
+		B55858292649402B00A91281 /* XcodeBuildInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55858282649402B00A91281 /* XcodeBuildInterface.swift */; };
+		B558582B2649407900A91281 /* XcodeBuildTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582A2649407900A91281 /* XcodeBuildTarget.swift */; };
+		B558582E264941D400A91281 /* Process+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582D264941D400A91281 /* Process+Extensions.swift */; };
+		B558583026494DFB00A91281 /* XCodeBuildInterface.List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582F26494DFB00A91281 /* XCodeBuildInterface.List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		B558581926493EB900A91281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B558581B26493EB900A91281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B558581C26493EB900A91281 /* XCFrameworker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCFrameworker.entitlements; sourceTree = "<group>"; };
+		B558582226493EC300A91281 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		B558582426493EE300A91281 /* XcodeProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProject.swift; sourceTree = "<group>"; };
+		B558582626493F1500A91281 /* XcodeProject.Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProject.Scheme.swift; sourceTree = "<group>"; };
+		B55858282649402B00A91281 /* XcodeBuildInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBuildInterface.swift; sourceTree = "<group>"; };
+		B558582A2649407900A91281 /* XcodeBuildTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBuildTarget.swift; sourceTree = "<group>"; };
+		B558582D264941D400A91281 /* Process+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process+Extensions.swift"; sourceTree = "<group>"; };
+		B558582F26494DFB00A91281 /* XCodeBuildInterface.List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCodeBuildInterface.List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,11 @@
 			children = (
 				B558580F26493EB900A91281 /* AppDelegate.swift */,
 				B558581126493EB900A91281 /* ContentView.swift */,
+				B558582226493EC300A91281 /* Builder.swift */,
+				B558582C2649409400A91281 /* Xcode */,
+				B55858282649402B00A91281 /* XcodeBuildInterface.swift */,
+				B558582F26494DFB00A91281 /* XCodeBuildInterface.List.swift */,
+				B558582D264941D400A91281 /* Process+Extensions.swift */,
 				B558581326493EB900A91281 /* Assets.xcassets */,
 				B558581826493EB900A91281 /* Main.storyboard */,
 				B558581B26493EB900A91281 /* Info.plist */,
@@ -72,6 +91,16 @@
 				B558581626493EB900A91281 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B558582C2649409400A91281 /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				B558582A2649407900A91281 /* XcodeBuildTarget.swift */,
+				B558582426493EE300A91281 /* XcodeProject.swift */,
+				B558582626493F1500A91281 /* XcodeProject.Scheme.swift */,
+			);
+			path = Xcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +175,13 @@
 			files = (
 				B558581226493EB900A91281 /* ContentView.swift in Sources */,
 				B558581026493EB900A91281 /* AppDelegate.swift in Sources */,
+				B558582B2649407900A91281 /* XcodeBuildTarget.swift in Sources */,
+				B558582326493EC300A91281 /* Builder.swift in Sources */,
+				B558582526493EE300A91281 /* XcodeProject.swift in Sources */,
+				B558582E264941D400A91281 /* Process+Extensions.swift in Sources */,
+				B55858292649402B00A91281 /* XcodeBuildInterface.swift in Sources */,
+				B558582726493F1500A91281 /* XcodeProject.Scheme.swift in Sources */,
+				B558583026494DFB00A91281 /* XCodeBuildInterface.List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.standalone.XCFrameworker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -319,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.standalone.XCFrameworker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
