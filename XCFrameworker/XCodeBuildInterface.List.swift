@@ -9,13 +9,13 @@ import Foundation
 
 extension XCodeBuildInterface {
 	struct List: Codable {
-		let project: Project
+		var project: Project = Project()
 		
 		struct Project: Codable {
-			let name: String
-			let configurations: [String]
-			let schemes: [String]
-			let targets: [String]
+			var name: String = ""
+      var configurations: [String] = []
+      var schemes: [String] = []
+      var targets: [String] = []
 		}
 	}
 }

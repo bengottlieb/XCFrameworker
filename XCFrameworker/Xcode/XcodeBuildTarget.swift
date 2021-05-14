@@ -10,5 +10,7 @@ import Foundation
 protocol XcodeBuildTarget {
 	var url: URL { get }
 	var rawType: String { get }
+  
+  
 }
 

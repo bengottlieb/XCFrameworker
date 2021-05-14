@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,10 @@
 		B558582B2649407900A91281 /* XcodeBuildTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582A2649407900A91281 /* XcodeBuildTarget.swift */; };
 		B558582E264941D400A91281 /* Process+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582D264941D400A91281 /* Process+Extensions.swift */; };
 		B558583026494DFB00A91281 /* XCodeBuildInterface.List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558582F26494DFB00A91281 /* XCodeBuildInterface.List.swift */; };
+		B5872B612649F489001755F6 /* XcodeProject.Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5872B602649F489001755F6 /* XcodeProject.Target.swift */; };
+		B5872B632649F634001755F6 /* XcodeProject.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5872B622649F634001755F6 /* XcodeProject.Configuration.swift */; };
+		B5872B65264A0CE4001755F6 /* ProjectBuildConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5872B64264A0CE4001755F6 /* ProjectBuildConfigurationView.swift */; };
+		B5872B68264A0D23001755F6 /* Suite in Frameworks */ = {isa = PBXBuildFile; productRef = B5872B67264A0D23001755F6 /* Suite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,9 @@
 		B558582A2649407900A91281 /* XcodeBuildTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBuildTarget.swift; sourceTree = "<group>"; };
 		B558582D264941D400A91281 /* Process+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process+Extensions.swift"; sourceTree = "<group>"; };
 		B558582F26494DFB00A91281 /* XCodeBuildInterface.List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCodeBuildInterface.List.swift; sourceTree = "<group>"; };
+		B5872B602649F489001755F6 /* XcodeProject.Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProject.Target.swift; sourceTree = "<group>"; };
+		B5872B622649F634001755F6 /* XcodeProject.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProject.Configuration.swift; sourceTree = "<group>"; };
+		B5872B64264A0CE4001755F6 /* ProjectBuildConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBuildConfigurationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5872B68264A0D23001755F6 /* Suite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +64,9 @@
 				B558580E26493EB900A91281 /* XCFrameworker */,
 				B558580D26493EB900A91281 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		B558580D26493EB900A91281 /* Products */ = {
 			isa = PBXGroup;
@@ -71,6 +81,7 @@
 			children = (
 				B558580F26493EB900A91281 /* AppDelegate.swift */,
 				B558581126493EB900A91281 /* ContentView.swift */,
+				B5872B64264A0CE4001755F6 /* ProjectBuildConfigurationView.swift */,
 				B558582226493EC300A91281 /* Builder.swift */,
 				B558582C2649409400A91281 /* Xcode */,
 				B55858282649402B00A91281 /* XcodeBuildInterface.swift */,
@@ -99,6 +110,8 @@
 				B558582A2649407900A91281 /* XcodeBuildTarget.swift */,
 				B558582426493EE300A91281 /* XcodeProject.swift */,
 				B558582626493F1500A91281 /* XcodeProject.Scheme.swift */,
+				B5872B602649F489001755F6 /* XcodeProject.Target.swift */,
+				B5872B622649F634001755F6 /* XcodeProject.Configuration.swift */,
 			);
 			path = Xcode;
 			sourceTree = "<group>";
@@ -119,6 +132,9 @@
 			dependencies = (
 			);
 			name = XCFrameworker;
+			packageProductDependencies = (
+				B5872B67264A0D23001755F6 /* Suite */,
+			);
 			productName = XCFrameworker;
 			productReference = B558580C26493EB900A91281 /* XCFrameworker.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +162,9 @@
 				Base,
 			);
 			mainGroup = B558580326493EB900A91281;
+			packageReferences = (
+				B5872B66264A0D23001755F6 /* XCRemoteSwiftPackageReference "suite" */,
+			);
 			productRefGroup = B558580D26493EB900A91281 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,13 +192,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5872B65264A0CE4001755F6 /* ProjectBuildConfigurationView.swift in Sources */,
 				B558581226493EB900A91281 /* ContentView.swift in Sources */,
+				B5872B612649F489001755F6 /* XcodeProject.Target.swift in Sources */,
 				B558581026493EB900A91281 /* AppDelegate.swift in Sources */,
 				B558582B2649407900A91281 /* XcodeBuildTarget.swift in Sources */,
 				B558582326493EC300A91281 /* Builder.swift in Sources */,
 				B558582526493EE300A91281 /* XcodeProject.swift in Sources */,
 				B558582E264941D400A91281 /* Process+Extensions.swift in Sources */,
 				B55858292649402B00A91281 /* XcodeBuildInterface.swift in Sources */,
+				B5872B632649F634001755F6 /* XcodeProject.Configuration.swift in Sources */,
 				B558582726493F1500A91281 /* XcodeProject.Scheme.swift in Sources */,
 				B558583026494DFB00A91281 /* XCodeBuildInterface.List.swift in Sources */,
 			);
@@ -384,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B5872B66264A0D23001755F6 /* XCRemoteSwiftPackageReference "suite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bengottlieb/suite";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.54;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B5872B67264A0D23001755F6 /* Suite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5872B66264A0D23001755F6 /* XCRemoteSwiftPackageReference "suite" */;
+			productName = Suite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B558580426493EB900A91281 /* Project object */;
 }

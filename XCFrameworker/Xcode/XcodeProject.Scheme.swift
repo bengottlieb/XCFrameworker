@@ -8,7 +8,12 @@
 import Foundation
 
 extension XcodeProject {
-	struct Scheme {
+  struct Scheme: Identifiable, Hashable, Comparable {
+    var id: String { name }
+    func hash(into hasher: inout Hasher) {  name.hash(into: &hasher) }
 		let name: String
+    
+    static func <(lhs: Scheme, rhs: Scheme) -> Bool { lhs.name < rhs.name }
+    static let none = Scheme(name: "(none)")
 	}
 }
