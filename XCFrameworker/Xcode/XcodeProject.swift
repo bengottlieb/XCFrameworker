@@ -14,14 +14,14 @@ class XcodeProject: XcodeBuildTarget, ObservableObject {
 
   var loadingSubscription: AnyCancellable?
 	var rawType: String { "project" }
-  var targets: [Target] = [] { didSet { if selectedTarget == nil { selectedTarget = targets.first }}}
-  var schemes: [Scheme] = [] { didSet { if selectedScheme == nil { selectedScheme = schemes.first }}}
-  var configurations: [Configuration] = [] { didSet { if selectedConfiguration == nil { selectedConfiguration = configurations.first }}}
+	var targets: [Target] = [] { didSet { if selectedTarget == .none { selectedTarget = targets.first ?? .none }}}
+  var schemes: [Scheme] = [] { didSet { if selectedScheme == .none { selectedScheme = schemes.first ?? .none }}}
+  var configurations: [Configuration] = [] { didSet { if selectedConfiguration == .none { selectedConfiguration = configurations.first ?? .none }}}
   var name: String?
   
-  var selectedTarget: Target?
-  var selectedScheme: Scheme?
-  var selectedConfiguration: Configuration?
+	var selectedTarget: Target = .none { didSet { objectWillChange.sendOnMain() }}
+	var selectedScheme: Scheme = .none { didSet { objectWillChange.sendOnMain() }}
+	var selectedConfiguration: Configuration = .none { didSet { objectWillChange.sendOnMain() }}
   
   var isLoaded = CurrentValueSubject<Bool, Never>(false)
 

@@ -14,36 +14,32 @@ struct ProjectBuildConfigurationView: View {
     VStack() {
       Text(project.name ?? "")
       HStack() {
-        Picker("", selection: $project.selectedTarget) {
+        Picker("Target", selection: $project.selectedTarget) {
           ForEach(project.targets) { target in
             Text(target.name).tag(target)
           }
         }
-        .fixedSize()
         Spacer()
       }
       
       HStack() {
-        Picker("", selection: $project.selectedConfiguration) {
+        Picker("Configuration", selection: $project.selectedConfiguration) {
           ForEach(project.configurations) { config in
             Text(config.name).tag(config)
           }
         }
-        .fixedSize()
         Spacer()
       }
       
       HStack() {
-        Picker("", selection: $project.selectedTarget) {
+        Picker("Scheme", selection: $project.selectedScheme) {
           ForEach(project.schemes) { scheme in
             Text(scheme.name).tag(scheme)
           }
         }
-        .fixedSize()
         Spacer()
       }
     }
-    .pickerStyle(SegmentedPickerStyle())
     .padding()
   }
 }
